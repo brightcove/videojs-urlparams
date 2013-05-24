@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>Video.js URL Parameters Example</title>
+  <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
+  <link href="videojs.thumbnails.css" rel="stylesheet">
+  <style>
+    p {
+      background-color: #eee;
+      border: thin solid #777;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+<p>
+  The URL Params plugin reads a URL parameter from the containing page to determine where to seek into the video, and whether to autoplay.
+  Try any of the following links no see it in action:</p>
+<ul>
+  <li>
+    <a href="?t=30s">seek to 30 seconds</a> 
+  </li>
+  <li>
+    <a href="?t=30s&autoplay">seek to 30 seconds and autoplay</a> 
+  </li>
+</ul>
+
+<video id='video'
+       src='http://video-js.zencoder.com/oceans-clip.mp4'
+       class='video-js vjs-default-skin'
+       width='640'
+       height='264'
+       poster='http://video-js.zencoder.com/oceans-clip.jpg'
+       controls>
+</video>
+<script src="http://vjs.zencdn.net/4.0/video.js"></script>
+<script src='videojs.urlparams.js'></script>
+<script>
+// initialize video.js
+var video = videojs('video');
+
+// read in URL parameters and apply them
+video.urlparams();
+
+</script>
+</body>
+</html>

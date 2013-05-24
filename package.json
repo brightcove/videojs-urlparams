@@ -1,0 +1,8 @@
+{
+  "name": "videojs-urlparams",
+  "description": "url parameter configuration for video.js",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "video-js": "4.0"
+  }
+}
